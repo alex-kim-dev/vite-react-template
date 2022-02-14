@@ -1,7 +1,13 @@
 {
   "name": "vite-react-template",
+  "version": "1.0.0-alpha.0",
   "private": true,
-  "version": "0.0.0",
+  "description": "Vite template for React Typescript projects",
+  "license": "MIT",
+  "repository": "git@github.com:alex-kim-dev/vite-react-template.git",
+  "author": "Alex Kim (https://github.com/alex-kim-dev)",
+  "homepage": "https://alex-kim-dev.github.io/vite-react-template#readme",
+  "bugs": "https://github.com/alex-kim-dev/vite-react-template/issues",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
