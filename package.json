@@ -9,8 +9,8 @@
   "homepage": "https://alex-kim-dev.github.io/vite-react-template#readme",
   "bugs": "https://github.com/alex-kim-dev/vite-react-template/issues",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
+    "dev": "vite",
     "preview": "vite preview"
   },
   "dependencies": {
