@@ -8,9 +8,9 @@ export const App = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img alt='logo' className='App-logo' src={logo} />
+    <div className='app'>
+      <header className='app-header'>
+        <img alt='logo' className='app-logo' src={logo} />
         <p>Hello Vite + React!</p>
         <p>
           <button type='button' onClick={() => setCount((c) => c + 1)}>
@@ -22,7 +22,7 @@ export const App = () => {
         </p>
         <p>
           <a
-            className='App-link'
+            className='app-link'
             href='https://reactjs.org'
             rel='noopener noreferrer'
             target='_blank'>
@@ -30,7 +30,7 @@ export const App = () => {
           </a>
           {' | '}
           <a
-            className='App-link'
+            className='app-link'
             href='https://vitejs.dev/guide/features.html'
             rel='noopener noreferrer'
             target='_blank'>
