@@ -23,6 +23,15 @@ plugins:
   - simple-import-sort
 
 rules:
+  import/no-extraneous-dependencies:
+    - error
+    - devDependencies:
+        - vite.config.ts
+        - jest.setup.ts
+        - src/testUtils.tsx
+        - src/__mocks__/**
+        - '**/__tests__/**/*.ts?(x)'
+        - '**/?(*.)+(spec|test).ts?(x)'
   import/order: off
   import/prefer-default-export: off
   react/function-component-definition:
@@ -41,6 +50,12 @@ rules:
   sort-imports: off
 
 overrides:
-  - files: vite.config.ts
-    rules:
-      import/no-extraneous-dependencies: off
+  - files:
+      - '**/__tests__/**/*.ts?(x)'
+      - '**/?(*.)+(spec|test).ts?(x)'
+    extends:
+      - plugin:jest/recommended
+      - plugin:jest-dom/recommended
+      - plugin:testing-library/react
+    env:
+      jest: true
