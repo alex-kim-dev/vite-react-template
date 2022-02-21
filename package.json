@@ -9,9 +9,16 @@
   "homepage": "https://alex-kim-dev.github.io/vite-react-template#readme",
   "bugs": "https://github.com/alex-kim-dev/vite-react-template/issues",
   "scripts": {
-    "build": "tsc && vite build",
-    "dev": "vite",
-    "preview": "vite preview"
+    "build": "vite build",
+    "format": "prettier --check --ignore-path .gitignore \"**/*.{html,json,yml,md}\"",
+    "lint:styles": "stylelint --cache --ignore-path .gitignore \"**/*.css\"",
+    "lint:ts": "eslint --cache --ignore-path .gitignore --ext .ts,.tsx .",
+    "serve": "vite preview",
+    "start": "vite",
+    "test": "jest --watch",
+    "test:ci": "jest --ci",
+    "test:coverage": "jest --coverage",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "react": "17.0.2",
