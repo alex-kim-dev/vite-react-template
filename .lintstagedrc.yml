@@ -1,0 +1,10 @@
+'*.ts{,x}':
+  - eslint --fix
+  - tsc-files --noEmit src/vite-env.d.ts
+  - jest --findRelatedTests
+
+'*.css':
+  - stylelint --fix
+
+'*.{html,json,yml,md}':
+  - prettier --write
