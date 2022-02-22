@@ -1,6 +1,6 @@
 '*.ts{,x}':
   - eslint --fix
-  - tsc-files --noEmit src/vite-env.d.ts
+  - tsc-files --noEmit src/global.d.ts
   - jest --findRelatedTests
 
 '*.css':
