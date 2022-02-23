@@ -1,5 +1,5 @@
-import { App } from 'App';
-import { render, screen } from 'testUtils';
+import { App } from '~/App';
+import { render, screen } from '~/testUtils';
 
 test('temp', () => {
   render(<App />);

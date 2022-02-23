@@ -22,6 +22,9 @@ parserOptions:
 plugins:
   - simple-import-sort
 
+settings:
+  import/resolver: typescript
+
 rules:
   import/no-extraneous-dependencies:
     - error
