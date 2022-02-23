@@ -4,7 +4,7 @@
 
 - Vite
   - html minification, EJS template
-  - resolving non-relative imports relative to `src`
+  - import aliases
   - importing SVGs as react components
   - CSS / preprocessors / modules [support](https://vitejs.dev/guide/features.html#css)
 - React
@@ -42,3 +42,8 @@
 4. Check out the available scripts in `package.json` or execute `npm run`.
 
 After installing additional typings add them to the `types` array in `tsconfig.json`.
+
+To add import aliases, edit these two:
+
+- `path` in `tsconfig.json`
+- `moduleNameMapper` in `jest.config.json` - order matters
