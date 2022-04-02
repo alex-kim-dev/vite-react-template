@@ -21,8 +21,8 @@
     },
     "types": [
       "vite-plugin-svgr/client",
-      "react",
-      "react-dom",
+      "react/next",
+      "react-dom/next",
       "jest",
       "testing-library__jest-dom"
     ]
