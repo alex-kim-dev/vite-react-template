@@ -8,7 +8,7 @@ export default defineConfig(() => ({
   plugins: [
     react(),
     html({
-      entry: 'src/main.tsx',
+      entry: '/src/main.tsx',
       template: 'src/index.html',
       minify: true,
     }),
