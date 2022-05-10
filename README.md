@@ -44,8 +44,6 @@
 3. Change the name, description, author, license, links in `package.json`.
 4. Check out the available scripts in `package.json` or execute `npm run`.
 
-After installing additional typings add them to the `types` array in `tsconfig.json`.
-
 To add import aliases, edit these two:
 
 - `path` in `tsconfig.json`
