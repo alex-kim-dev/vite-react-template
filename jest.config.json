@@ -1,11 +1,14 @@
 {
   "clearMocks": true,
-  "globals": {
-    "ts-jest": {
-      "diagnostics": {
-        "exclude": ["**"]
+  "transform": {
+    "\\.tsx?$": [
+      "ts-jest",
+      {
+        "diagnostics": {
+          "exclude": ["**"]
+        }
       }
-    }
+    ]
   },
   "moduleDirectories": ["node_modules", "src"],
   "moduleNameMapper": {
