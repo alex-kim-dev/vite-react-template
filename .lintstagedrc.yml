@@ -1,7 +1,7 @@
 '*.ts{,x}':
   - eslint --fix
   - tsc-files --noEmit src/global.d.ts
-  - jest --findRelatedTests
+  - jest --findRelatedTests --passWithNoTests
 
 '*.css':
   - stylelint --fix

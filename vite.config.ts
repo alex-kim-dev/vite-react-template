@@ -1,4 +1,4 @@
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
 import { createHtmlPlugin as html } from 'vite-plugin-html';
 import svgr from 'vite-plugin-svgr';
