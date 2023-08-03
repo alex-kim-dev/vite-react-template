@@ -30,11 +30,11 @@ rules:
     - error
     - devDependencies:
         - vite.config.ts
-        - jest.setup.ts
+        - test.setup.ts
         - src/testUtils.tsx
         - src/__mocks__/**
         - '**/__tests__/**/*.ts?(x)'
-        - '**/?(*.)+(spec|test).ts?(x)'
+        - '**/?(*.)+(test).ts?(x)'
   import/order: off
   import/prefer-default-export: off
   jsx-a11y/label-has-associated-control:
@@ -62,10 +62,8 @@ rules:
 overrides:
   - files:
       - '**/__tests__/**/*.ts?(x)'
-      - '**/?(*.)+(spec|test).ts?(x)'
+      - '**/?(*.)+(test).ts?(x)'
     extends:
-      - plugin:jest/recommended
+      - plugin:vitest/recommended
       - plugin:jest-dom/recommended
       - plugin:testing-library/react
-    env:
-      jest: true

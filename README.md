@@ -12,7 +12,7 @@
   - CSS / preprocessors / modules [support](https://vitejs.dev/guide/features.html#css)
 - React
 - Typescript
-- React Testing Library, test utils
+- Vitest, Happy Dom, React Testing Library, test utils. In tests css processing is turned off.
 - Eslint: airbnb config, prettier integration, import & props sorting
 - Stylelint: standard config, prettier integration, css props sorting
 - Editorconfig & Prettier
@@ -44,7 +44,4 @@
 3. Change the name, description, author, license, links in `package.json`.
 4. Check out the available scripts in `package.json` or execute `npm run`.
 
-To add import aliases, edit these two:
-
-- `path` in `tsconfig.json`
-- `moduleNameMapper` in `jest.config.json` - order matters
+To add import aliases, edit `path` in `tsconfig.json`.

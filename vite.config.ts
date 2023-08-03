@@ -15,4 +15,11 @@ export default defineConfig(() => ({
     tsconfigPaths(),
     svgr(),
   ],
+
+  test: {
+    globals: false,
+    environment: 'happy-dom',
+    setupFiles: './test.setup.ts',
+    css: false,
+  },
 }));
