@@ -1,5 +1,3 @@
-import { expect, test } from 'vitest';
-
 import { App } from '~/App';
 import { render, screen, user } from '~/testUtils';
 
