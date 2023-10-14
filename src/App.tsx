@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import css from '~/App.module.css';
-import { ReactComponent as Logo } from '~/logo.svg';
+import Logo from '~/logo.svg?react';
 
 export const App = () => {
   const [count, setCount] = useState(0);
