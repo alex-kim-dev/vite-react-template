@@ -15,7 +15,7 @@ concurrency:
 
 env:
   HUSKY: 0
-  NODE_VERSION: 18
+  NODE_VERSION: 20
 
 jobs:
   cache-deps:
@@ -53,7 +53,7 @@ jobs:
         run: npm ci
 
       - name: Lint typescript
-        run: npm run lint:ts
+        run: npm run lint:code
 
       - name: Lint styles
         if: always() && steps.install.outcome == 'success'
