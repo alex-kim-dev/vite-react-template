@@ -21,6 +21,6 @@
     /* Linting */
     "strict": true
   },
-  "include": ["src"],
+  "include": ["src", "test.setup.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
