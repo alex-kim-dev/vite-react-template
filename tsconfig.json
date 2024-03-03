@@ -7,7 +7,7 @@
     "skipLibCheck": true,
     "baseUrl": "src",
     "paths": {
-      "~/*": ["./*"],
+      "~/*": ["./*"]
     },
 
     /* Bundler mode */
@@ -19,8 +19,8 @@
     "jsx": "react-jsx",
 
     /* Linting */
-    "strict": true,
+    "strict": true
   },
   "include": ["src", "test.setup.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
