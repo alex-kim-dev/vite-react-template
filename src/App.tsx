@@ -1,49 +1,39 @@
+import cn from 'clsx';
 import { useState } from 'react';
 
+import viteLogo from '/vite.svg';
 import css from '~/App.module.css';
-import Logo from '~/logo.svg?react';
+import ReactLogo from '~/assets/react.svg?react';
 
-export const App = () => {
+export const App: React.FC = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className={css.wrapper}>
-      <header className={css.header}>
-        <Logo className={css.logo} />
-        <p>Hello Vite + React!</p>
+    <>
+      <div>
+        <a href='https://vitejs.dev' target='_blank'>
+          <img src={viteLogo} className={css.logo} alt='Vite logo' />
+        </a>
+        <a href='https://react.dev' target='_blank'>
+          <ReactLogo className={cn(css.logo, css.react)} />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className={css.card}>
+        <button
+          onClick={() => {
+            setCount((count) => count + 1);
+          }}
+        >
+          count is {count}
+        </button>
         <p>
-          <button
-            type='button'
-            onClick={() => {
-              setCount((c) => c + 1);
-            }}
-          >
-            count is: {count}
-          </button>
+          Edit <code>src/App.tsx</code> and save to test HMR
         </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className={css.link}
-            href='https://reactjs.org'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className={css.link}
-            href='https://vitejs.dev/guide/features.html'
-            rel='noopener noreferrer'
-            target='_blank'
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+      </div>
+      <p className={css.readTheDocs}>
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   );
 };
