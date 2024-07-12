@@ -16,7 +16,8 @@ export const App = () => {
             type='button'
             onClick={() => {
               setCount((c) => c + 1);
-            }}>
+            }}
+          >
             count is: {count}
           </button>
         </p>
@@ -28,7 +29,8 @@ export const App = () => {
             className={css.link}
             href='https://reactjs.org'
             rel='noopener noreferrer'
-            target='_blank'>
+            target='_blank'
+          >
             Learn React
           </a>
           {' | '}
@@ -36,7 +38,8 @@ export const App = () => {
             className={css.link}
             href='https://vitejs.dev/guide/features.html'
             rel='noopener noreferrer'
-            target='_blank'>
+            target='_blank'
+          >
             Vite Docs
           </a>
         </p>

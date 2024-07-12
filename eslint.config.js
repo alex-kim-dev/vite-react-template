@@ -30,10 +30,7 @@ export default tseslint.config(
   },
 
   {
-    files: [
-      'src/**/__tests__/**/*.ts?(x)',
-      'src/**/?(*.)+(test).ts?(x)',
-    ],
+    files: ['src/**/__tests__/**/*.ts?(x)', 'src/**/?(*.)+(test).ts?(x)'],
     plugins: {
       vitest,
     },
