@@ -5,28 +5,26 @@
 
 ## Features
 
+- PNPM, pinned versions of dependencies
 - Vite
-  - html minification, EJS template
-  - import aliases
-  - importing SVGs as react components
-  - CSS / preprocessors / modules [support](https://vitejs.dev/guide/features.html#css)
+  - import alias `~/` mapped to `src`
+  - import SVGs as react components
 - React
 - Typescript
-- Vitest, Happy Dom, React Testing Library, test utils. In tests css processing is turned off.
-- Eslint: airbnb config, prettier integration, import & props sorting
-- Stylelint: standard config, prettier integration, css props sorting
-- Editorconfig & Prettier
+- Vitest, Happy Dom, React Testing Library, test utils. In tests css processing is turned off
+- Eslint v9: typescript-eslint config with type checking, imports sorting
+- Stylelint: standard config, css properties sorting
+- Prettier & editorconfig
 - Commitlint: conventional commits
 - pre-commit hook for linting/testing/typechecking staged files
 - CI on push & pr, in-progress workflow cancelling if a new one is queued, dependencies caching
-- pinned versions of dependencies
 
 ## Usage
 
 1. Click the `Use this template` button or clone locally:
 
    ```sh
-   npx degit alex-kim-dev/vite-react-template vite-project
+   pnpx degit alex-kim-dev/vite-react-template vite-project
    ```
 
    Both methods will clean the git history.
@@ -36,12 +34,10 @@
 2. Update & install the dependencies:
 
    ```sh
-   npx ncu -u && npm i
+   pnpx ncu -u && pnpm i
    ```
 
    _[npm-check-updates](https://github.com/raineorshine/npm-check-updates)_
 
 3. Change the name, description, author, license, links in `package.json`.
-4. Check out the available scripts in `package.json` or execute `npm run`.
-
-To add import aliases, edit `path` in `tsconfig.json`.
+4. Check out the available scripts in `package.json` or execute `pnpm run`.
