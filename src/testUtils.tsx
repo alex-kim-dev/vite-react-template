@@ -9,7 +9,7 @@ const Wrapper: FC<{ children: React.ReactNode }> = ({ children }) => {
 const customRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>,
-) => render(ui, { wrapper: Wrapper, ...options });
+): ReturnType<typeof render> => render(ui, { wrapper: Wrapper, ...options });
 
 const user = userEvent.setup();
 
