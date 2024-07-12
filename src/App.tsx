@@ -12,7 +12,11 @@ export const App = () => {
         <Logo className={css.logo} />
         <p>Hello Vite + React!</p>
         <p>
-          <button type='button' onClick={() => setCount((c) => c + 1)}>
+          <button
+            type='button'
+            onClick={() => {
+              setCount((c) => c + 1);
+            }}>
             count is: {count}
           </button>
         </p>
