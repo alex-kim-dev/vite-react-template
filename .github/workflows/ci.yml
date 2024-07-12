@@ -16,72 +16,42 @@ concurrency:
 env:
   HUSKY: 0
   NODE_VERSION: 20
+  PNPM_VERSION: 9
 
 jobs:
-  cache-deps:
-    name: Install & cache dependencies
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install
-        run: npm ci
-
   lint:
-    name: Lint & format
+    name: Format, lint, typecheck
     needs: cache-deps
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          cache: pnpm
 
       - name: Install
         id: install
-        run: npm ci
-
-      - name: Lint typescript
-        run: npm run lint:code
-
-      - name: Lint styles
-        if: always() && steps.install.outcome == 'success'
-        run: npm run lint:styles
+        run: pnpm install
 
       - name: Format
+        run: pnpm run format
+
+      - name: Lint
         if: always() && steps.install.outcome == 'success'
-        run: npm run format
-
-  typecheck:
-    name: Typecheck
-    needs: cache-deps
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
-
-      - name: Install
-        run: npm ci
+        run: pnpm run lint
 
       - name: Typecheck
-        run: npm run typecheck
+        if: always() && steps.install.outcome == 'success'
+        run: pnpm run typecheck
 
   test:
     name: Test
@@ -91,40 +61,50 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          cache: pnpm
 
       - name: Install
-        run: npm ci
+        run: pnpm install
 
       - name: Test
-        run: npm run test:ci
+        run: pnpm run test:ci
 
   build:
     name: Build
-    needs: [lint, typecheck, test]
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
+          cache: pnpm
 
       - name: Install
-        run: npm ci
+        run: pnpm install
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Upload build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: dist
