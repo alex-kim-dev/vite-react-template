@@ -21,7 +21,6 @@ env:
 jobs:
   lint:
     name: Format, lint, typecheck
-    needs: cache-deps
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -55,7 +54,6 @@ jobs:
 
   test:
     name: Test
-    needs: cache-deps
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
