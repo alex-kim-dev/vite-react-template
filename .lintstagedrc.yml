@@ -1,10 +1,12 @@
-'*.ts{,x}':
+'*.{j,t}s{,x}':
   - eslint --fix
-  - tsc-files --noEmit src/global.d.ts
   - vitest related --run --passWithNoTests
+
+'*.ts{,x}':
+  - tsc-files --noEmit src/global.d.ts
 
 '*.css':
   - stylelint --fix
 
-'*.{html,json,yml,md}':
+'*.{js,ts,jsx,tsx,css,html,json,yml,yaml,md}':
   - prettier --write
