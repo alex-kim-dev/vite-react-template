@@ -1,8 +1,8 @@
 // @ts-check
 
 import eslint from '@eslint/js';
+import vitest from '@vitest/eslint-plugin';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import vitest from 'eslint-plugin-vitest';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
