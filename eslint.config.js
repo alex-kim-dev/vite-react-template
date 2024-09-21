@@ -1,9 +1,9 @@
 // @ts-check
 
-import eslint from '@eslint/js';
-import vitest from '@vitest/eslint-plugin';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import tseslint from 'typescript-eslint';
+import eslint from '@eslint/js'
+import vitest from '@vitest/eslint-plugin'
+import simpleImportSort from 'eslint-plugin-simple-import-sort'
+import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -48,4 +48,4 @@ export default tseslint.config(
       },
     },
   },
-);
+)

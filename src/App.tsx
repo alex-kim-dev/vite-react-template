@@ -1,12 +1,12 @@
-import cn from 'clsx';
-import { useState } from 'react';
+import cn from 'clsx'
+import { useState } from 'react'
 
-import viteLogo from '/vite.svg';
-import css from '~/App.module.css';
-import ReactLogo from '~/assets/react.svg?react';
+import viteLogo from '/vite.svg'
+import css from '~/App.module.css'
+import ReactLogo from '~/assets/react.svg?react'
 
 export const App: React.FC = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -22,7 +22,7 @@ export const App: React.FC = () => {
       <div className={css.card}>
         <button
           onClick={() => {
-            setCount((count) => count + 1);
+            setCount((count) => count + 1)
           }}
         >
           count is {count}
@@ -31,9 +31,7 @@ export const App: React.FC = () => {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className={css.readTheDocs}>
-        Click on the Vite and React logos to learn more
-      </p>
+      <p className={css.readTheDocs}>Click on the Vite and React logos to learn more</p>
     </>
-  );
-};
+  )
+}
