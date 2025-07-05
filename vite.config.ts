@@ -5,11 +5,4 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig(() => ({
   plugins: [react(), tsconfigPaths(), svgr()],
-
-  test: {
-    globals: true,
-    environment: 'happy-dom',
-    setupFiles: './src/test/setup.ts',
-    css: false,
-  },
 }))

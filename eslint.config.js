@@ -1,7 +1,6 @@
 // @ts-check
 
 import eslint from '@eslint/js'
-import vitest from '@vitest/eslint-plugin'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import tseslint from 'typescript-eslint'
 
@@ -9,7 +8,6 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.strictTypeChecked,
-
   {
     languageOptions: {
       parserOptions: {
@@ -26,26 +24,6 @@ export default tseslint.config(
       'sort-imports': 'off',
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
-    },
-  },
-
-  {
-    files: ['src/**/__tests__/**/*.ts?(x)', 'src/**/?(*.)+(test).ts?(x)'],
-    plugins: {
-      vitest,
-    },
-    rules: {
-      ...vitest.configs.recommended.rules,
-    },
-    settings: {
-      vitest: {
-        typecheck: true,
-      },
-    },
-    languageOptions: {
-      globals: {
-        ...vitest.environments.env.globals,
-      },
     },
   },
 )

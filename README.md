@@ -11,12 +11,11 @@
   - import SVGs as react components
 - React
 - Typescript
-- Vitest, Happy Dom, React Testing Library, test utils. In tests css processing is turned off
 - Eslint v9: typescript-eslint config with type checking, imports sorting
 - Stylelint: standard config, css properties sorting
 - Prettier & editorconfig
 - Commitlint: conventional commits
-- pre-commit hook for linting/testing/typechecking staged files
+- pre-commit hook for formatting/linting/typechecking staged files
 - CI on push & pr, in-progress workflow cancelling if a new one is queued, dependencies caching
 
 ## Usage
