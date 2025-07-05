@@ -1,6 +1,9 @@
 extends:
   - stylelint-config-standard
   - stylelint-config-recess-order
+  
+plugins:
+  - stylelint-use-logical-spec
 
 rules:
   selector-class-pattern:

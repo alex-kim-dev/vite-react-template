@@ -1,0 +1,4 @@
+npm run typecheck
+npm run format
+npm run lint
+npm run stylelint

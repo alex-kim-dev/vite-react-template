@@ -1,9 +1,10 @@
 import cn from 'clsx'
 import { useState } from 'react'
 
-import viteLogo from '/vite.svg?url'
 import css from '~/App.module.css'
 import ReactLogo from '~/assets/react.svg'
+
+import viteLogo from '/vite.svg'
 
 export const App = () => {
   const [count, setCount] = useState(0)
@@ -11,10 +12,10 @@ export const App = () => {
   return (
     <>
       <div>
-        <a href='https://vite.dev' target='_blank'>
+        <a href='https://vite.dev' target='_blank' rel='noreferrer'>
           <img src={viteLogo} className={css.logo} alt='Vite logo' />
         </a>
-        <a href='https://react.dev' target='_blank'>
+        <a href='https://react.dev' target='_blank' rel='noreferrer'>
           <ReactLogo role='img' title='React logo' className={cn(css.logo, css.react)} />
         </a>
       </div>

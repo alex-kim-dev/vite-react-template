@@ -2,7 +2,7 @@
   - eslint --fix
 
 '*.css':
-  - stylelint --fix
+  - stylelint --fix strict
 
 '*.{js,ts,jsx,tsx,css,html,json,yml,yaml,md}':
   - prettier --write
