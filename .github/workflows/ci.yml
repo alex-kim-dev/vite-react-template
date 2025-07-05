@@ -48,6 +48,8 @@ jobs:
         if: always() && steps.install.outcome == 'success'
         run: pnpm run lint
 
+      # add stylelint
+
       - name: Typecheck
         if: always() && steps.install.outcome == 'success'
         run: pnpm run typecheck

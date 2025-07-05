@@ -13,11 +13,10 @@
     "build": "vite build",
     "dev": "vite",
     "format": "prettier --check . \"!pnpm-lock.yaml\"",
-    "lint": "conc pnpm:lint:*",
-    "lint:code": "eslint *.js *.ts src",
-    "lint:styles": "stylelint --ignore-path .gitignore \"**/*.css\"",
+    "lint": "eslint *.js *.ts src",
     "prepare": "husky",
     "serve": "vite preview",
+    "stylelint": "stylelint --ignore-path .gitignore \"**/*.css\"",
     "typecheck": "tsc -b"
   },
   "dependencies": {
@@ -33,7 +32,6 @@
     "@types/react": "18.3.11",
     "@types/react-dom": "18.3.1",
     "@vitejs/plugin-react-swc": "3.7.1",
-    "concurrently": "9.0.1",
     "eslint": "9.13.0",
     "eslint-plugin-simple-import-sort": "12.1.1",
     "husky": "9.1.6",
