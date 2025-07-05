@@ -1,9 +1,9 @@
 import cn from 'clsx'
 import { useState } from 'react'
 
-import viteLogo from '/vite.svg'
+import viteLogo from '/vite.svg?url'
 import css from '~/App.module.css'
-import ReactLogo from '~/assets/react.svg?react'
+import ReactLogo from '~/assets/react.svg'
 
 export const App = () => {
   const [count, setCount] = useState(0)
@@ -18,7 +18,7 @@ export const App = () => {
           <ReactLogo role='img' title='React logo' className={cn(css.logo, css.react)} />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>{import.meta.env.VITE_APP_TITLE || 'Vite + React'}</h1>
       <div className={css.card}>
         <button
           onClick={() => {
