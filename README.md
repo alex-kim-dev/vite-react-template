@@ -1,21 +1,29 @@
-[![Depfu](https://badges.depfu.com/badges/4b1166cf110842ec49787e0acf8f8723/overview.svg)](https://depfu.com/github/alex-kim-dev/vite-react-template?project_id=34571)
 [![CI](https://github.com/alex-kim-dev/vite-react-template/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/alex-kim-dev/vite-react-template/actions/workflows/ci.yml)
 
 # Vite React template
 
 ## Features
 
-- PNPM, pinned versions of dependencies
+- PNPM
 - Vite
-  - import alias `~/` mapped to `src`
-  - import SVGs as react components
+  - import alias `~/` mapped to `src`, `/` to `public`
+  - import SVGs as react components (SVGR)
+  - dev server with HTTP/2 (HTTPS + mkcert)
 - React
-- Typescript
-- Eslint v9: typescript-eslint config with type checking, imports sorting
-- Stylelint: standard config, css properties sorting
+- Typescript with strict linting
+- Eslint:
+  - typescript-eslint strict config
+  - plugins react, hooks, jsx a11y
+  - plugin import
+  - import sorting
+- Stylelint:
+  - standard config
+  - css properties sorting by groups
+  - enforced use of logical properties
+  - baseline
 - Prettier & editorconfig
 - Commitlint: conventional commits
-- pre-commit hook for formatting/linting/typechecking staged files
+- pre-commit hook for formatting/linting staged files, pre-push hook for checking everything
 - CI on push & pr, in-progress workflow cancelling if a new one is queued, dependencies caching
 
 ## Usage
