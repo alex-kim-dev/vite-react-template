@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches: [main]
-    paths-ignore: ['*.md', LICENSE, .gitignore, .husky/**]
+    paths-ignore: ['*.md', LICENSE, .gitignore, .husky/**, .vscode/**]
   pull_request:
     branches: [main]
-    paths-ignore: ['*.md', LICENSE, .gitignore, .husky/**]
+    paths-ignore: ['*.md', LICENSE, .gitignore, .husky/**, .vscode/**]
   workflow_dispatch:
 
 concurrency:
@@ -15,12 +15,12 @@ concurrency:
 
 env:
   HUSKY: 0
-  NODE_VERSION: 20
-  PNPM_VERSION: 9
+  NODE_VERSION: 22
+  PNPM_VERSION: 10
 
 jobs:
   lint:
-    name: Format, lint, typecheck
+    name: Format, lint, type check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -44,15 +44,17 @@ jobs:
       - name: Format
         run: pnpm run format
 
+      - name: Type check
+        if: always() && steps.install.outcome == 'success'
+        run: pnpm run typecheck
+
       - name: Lint
         if: always() && steps.install.outcome == 'success'
         run: pnpm run lint
 
-      # add stylelint
-
-      - name: Typecheck
+      - name: Style lint
         if: always() && steps.install.outcome == 'success'
-        run: pnpm run typecheck
+        run: pnpm run stylelint
 
   build:
     name: Build
