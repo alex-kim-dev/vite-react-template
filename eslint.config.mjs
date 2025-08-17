@@ -1,4 +1,5 @@
 import eslint from '@eslint/js'
+import vitest from '@vitest/eslint-plugin'
 import configPrettier from 'eslint-config-prettier/flat'
 import importPlugin from 'eslint-plugin-import'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
@@ -87,6 +88,16 @@ export default tseslint.config(
     ignores: ['src/**/*.d.ts'],
     rules: {
       'import/no-default-export': 'error',
+    },
+  },
+  {
+    name: 'App: tests',
+    files: ['src/**/*.test.{ts,tsx}'],
+    ...vitest.configs.recommended,
+    languageOptions: {
+      globals: {
+        ...vitest.environments.env.globals,
+      },
     },
   },
   {

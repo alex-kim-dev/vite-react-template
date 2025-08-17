@@ -1,5 +1,6 @@
 '*.{j,t}s{,x}':
   - eslint --fix
+  - vitest related --run --passWithNoTests
 
 '*.css':
   - stylelint --fix strict
