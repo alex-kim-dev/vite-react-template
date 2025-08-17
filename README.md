@@ -11,6 +11,7 @@
   - dev server with HTTP/2 (HTTPS + mkcert)
 - React
 - Typescript with strict linting
+- Vitest + React Testing Library + Happy Dom
 - Eslint:
   - typescript-eslint strict config
   - plugins react, hooks, jsx a11y
@@ -23,7 +24,7 @@
   - baseline
 - Prettier & editorconfig
 - Commitlint: conventional commits
-- pre-commit hook for formatting/linting staged files, pre-push hook for checking everything
+- pre-commit hook for formatting/linting/testing staged files, pre-push hook for checking everything
 - CI on push & pr, in-progress workflow cancelling if a new one is queued, dependencies caching
 
 ## Usage
