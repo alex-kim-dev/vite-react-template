@@ -21,7 +21,6 @@
   - standard config
   - css properties sorting by groups
   - enforced use of logical properties
-  - baseline
 - Prettier & editorconfig
 - Commitlint: conventional commits
 - pre-commit hook for formatting/linting/testing staged files, pre-push hook for checking everything
