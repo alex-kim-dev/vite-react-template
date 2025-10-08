@@ -53,7 +53,7 @@ export default tseslint.config(
         name: 'react/jsx-runtime',
         ...react.configs.flat['jsx-runtime'],
       },
-      reactHooks.configs['recommended-latest'],
+      reactHooks.configs.recommended,
       reactRefresh.configs.vite,
       jsxA11y.flatConfigs.recommended,
     ],
