@@ -19,10 +19,10 @@
     "prepare": "husky",
     "preview": "vite preview",
     "serve": "vite preview",
-    "stylelint": "stylelint --ignore-path .gitignore \"**/*.css\"",
+    "stylelint": "stylelint --ignore-path .gitignore \"**/*.css\" --allow-empty-input",
     "stylelint:fix": "pnpm run stylelint --fix strict",
     "test": "vitest",
-    "test:ci": "vitest run",
+    "test:ci": "vitest run --passWithNoTests",
     "typecheck": "tsc -b"
   },
   "dependencies": {
